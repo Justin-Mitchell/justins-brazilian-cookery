@@ -1,0 +1,10 @@
+<h1>Recipe Show View</h1>
+
+<%= image_tag(@recipe.picture, style: 'width: 150px')%>
+<h3><%= @recipe.title %></h3>
+<p><%= @recipe.description %></p>
+<p><%= @recipe.ingredients %></p>
+<p><%= @recipe.instructions%>
+
+<br/>
+<%= link_to('Recipes', recipes_path) %>

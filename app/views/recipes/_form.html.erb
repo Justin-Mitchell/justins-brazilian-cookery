@@ -1,0 +1,34 @@
+<h3>Partial: Form For Recipe</h3>
+
+<%= form_for(@recipe) do |f| %>
+<fieldset>
+  <section>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </section>
+  <section>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </section>
+  <section>
+    <%= f.label :ingredients %>
+    <%= f.text_area :ingredients %>
+  </section>
+  <section>
+    <%= f.label :instructions %>
+    <%= f.text_field :instructions %>
+  </section>
+  <section>
+    <%= f.label :picture_url %>
+    <%= f.text_field :picture %>
+  </section>
+  <section>
+    <%= f.label :chef %>
+    <%= f.select(:chef_id, options_for_select(options_for_chefs))%>
+  </section>
+  <section>
+    <%= f.submit("SAVE") %>
+  </section>
+</fieldset>
+
+<% end %>

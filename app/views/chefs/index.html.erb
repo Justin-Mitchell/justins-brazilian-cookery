@@ -1,0 +1,26 @@
+<h1>Chef Index</h1>
+
+<table>
+  <thead>
+    <th>name</th>
+    <th>specialty</th>
+    <th>tv show</th>
+    <th>photo</th>
+    <th>view</th>
+    <th>edit</th>
+    <th>delete</th>
+  </thead>
+  <tbody>
+    <% @chefs.each do |chef| %>
+    <tr>
+      <td>CHEF: <%= chef.name %></td>
+      <td>SPECIALTY: <%= chef.specialty %></td>
+      <td>TV SHOW: <%= chef.tv_show %></td>
+      <td><%= image_tag(chef.photo, size: '40x30') %></td>
+      <td><%= link_to('view', chef_path(chef.id)) %></td>
+      <td><%= link_to('edit', edit_chef_path(chef.id)) %></td>
+      <td><%= link_to('delete', chef_path(chef.id), method: :delete, confirm: 'Are you really sure???') %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,8 @@
+<h1>Chef Show View</h1>
+
+<h3><%= @chef.name %></h3>
+<h4><%= @chef.specialty %></h4>
+<h5><%= @chef.tv_show %></h5>
+<%= image_tag(@chef.photo, style: 'width: 150px')%>
+<br/>
+<%= link_to('Chefs', chefs_path) %>

@@ -1,0 +1,28 @@
+<h3>Partial: Form For Chef</h3>
+
+<%= form_for(@chef) do |f| %>
+  <fieldset>
+    <section>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </section>
+    <section>
+      <%= f.label :specialty %>
+      <%= f.text_field :specialty %>
+    </section>
+    <section>
+      <%= f.label :tv_show %>
+      <%= f.text_field :tv_show %>
+    </section>
+    <section>
+      <%= f.label :photo_url %>
+      <%= f.text_field :photo %>
+    </section>
+  </fieldset>
+  <fieldset>
+    <section>
+      <%= f.submit('SAVE') %>
+    </section>
+  </fieldset>
+
+<% end %>
